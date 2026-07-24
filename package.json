@@ -1,0 +1,13 @@
+{
+  "name": "busease",
+  "version": "1.0.0",
+  "description": "BusEase — monorepo runner (backend + frontend)",
+  "scripts": {
+    "install:backend": "npm install --prefix backend",
+    "install:frontend": "cd frontend && bun install",
+    "install:all": "npm install --prefix backend && cd frontend && bun install",
+    "dev:backend": "npm run dev --prefix backend",
+    "dev:frontend": "cd frontend && bun run dev",
+    "dev": "start cmd /k \"npm run dev:backend\" && start cmd /k \"npm run dev:frontend\""
+  }
+}
