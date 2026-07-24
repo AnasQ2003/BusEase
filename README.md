@@ -12,7 +12,7 @@
 
 ## 📽️ Project Demo Video
 
-[![Watch Project Demo Video](https://img.youtube.com/vi/PLACEHOLDER_VIDEO_ID/maxresdefault.jpg)](https://youtube.com/watch?v=PLACEHOLDER_VIDEO_ID)
+[![Watch Project Demo Video](https://youtu.be/S_MUMI5wSzY)
 
 > 💡 *Click the thumbnail above to watch the full walkthrough video on YouTube. (Replace `PLACEHOLDER_VIDEO_ID` with your actual YouTube video link).*
 
