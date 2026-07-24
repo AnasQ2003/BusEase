@@ -87,7 +87,7 @@ function SplashScreen() {
           })}
         </div>
 
-        <div className="relative flex h-full flex-col items-center justify-between px-8 pt-14 pb-10">
+        <div className="relative flex h-full flex-col items-center justify-between px-8 pt-4 pb-6">
           {/* Wordmark */}
           <div className="text-center animate-fade-in">
             <div className="mb-2 inline-flex items-center gap-2 rounded-full glass-panel px-3 py-1 text-[10px] font-semibold tracking-widest uppercase text-foreground/80">

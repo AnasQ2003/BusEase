@@ -33,7 +33,7 @@ function Profile() {
   const [drawer, setDrawer] = useState(false);
   return (
     <MobileFrame>
-      <div className="relative h-full w-full overflow-hidden bg-background">
+      <div className="relative min-h-full w-full bg-background flex flex-col">
         <div
           className="absolute inset-x-0 top-0 h-72 pointer-events-none"
           style={{
@@ -55,7 +55,7 @@ function Profile() {
           }
         />
 
-        <div className="relative h-[calc(100%-64px-80px)] overflow-y-auto no-scrollbar px-5 pb-6">
+        <div className="relative flex-1 overflow-y-auto no-scrollbar px-5 pb-32">
           {/* Avatar card */}
           <div className="flex flex-col items-center pt-2 pb-6 animate-fade-up">
             <div className="relative">

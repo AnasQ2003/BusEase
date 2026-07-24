@@ -1,6 +1,7 @@
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import { MobileFrame } from "@/components/mobile-frame";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { toast } from "sonner";
 import {
   Mail,
   Lock,
@@ -10,7 +11,6 @@ import {
   User,
   Phone,
   ArrowRight,
-  ArrowLeft,
   Bus,
   Globe,
   ChevronDown,
@@ -32,17 +32,38 @@ function SignIn() {
   const [mode, setMode] = useState<Mode>("signin");
   const [showPwd, setShowPwd] = useState(false);
   const [remember, setRemember] = useState(true);
-  const [agree, setAgree] = useState(false);
+  const [agree, setAgree] = useState(true);
   const [countryPickerOpen, setCountryPickerOpen] = useState(false);
   const [forgotOpen, setForgotOpen] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
   const [country, setCountry] = useState("PK");
-  const [name, setName] = useState("");
+  const [name, setName] = useState("Anas Qureshi");
+  const [email, setEmail] = useState("anas@example.com");
+  const [password, setPassword] = useState("anas123");
   const [phone, setPhone] = useState("");
-  const [email, setEmail] = useState("");
 
   const activeCountry = countryOf(country);
+
+  /* Load "Remember me" saved user on mount */
+  useEffect(() => {
+    try {
+      const saved = localStorage.getItem("velocity_remember_me");
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        if (parsed.email) setEmail(parsed.email);
+        if (parsed.password) setPassword(parsed.password);
+        if (parsed.name) setName(parsed.name);
+        setRemember(true);
+      } else {
+        setEmail("anas@example.com");
+        setPassword("anas123");
+        setName("Anas Qureshi");
+      }
+    } catch {
+      // fallback
+    }
+  }, []);
 
   function submit(e: React.FormEvent) {
     e.preventDefault();
@@ -50,58 +71,83 @@ function SignIn() {
       setError("Please accept the Terms & Privacy Policy to continue.");
       return;
     }
-    if (mode === "signin" && !name.trim()) {
-      setError("Please enter your name to sign in.");
-      return;
-    }
-    setError(null);
-    if (mode === "signup") {
+
+    if (mode === "signin") {
+      const cleanEmail = email.trim().toLowerCase();
+      if (!cleanEmail || !password) {
+        setError("Please enter your email and password.");
+        return;
+      }
+
+      // Check registered user: anas@example.com / anas123
+      if (cleanEmail !== "anas@example.com" || password !== "anas123") {
+        setError("Invalid email or password. Use: anas@example.com / anas123");
+        toast.error("Incorrect credentials! Use: anas@example.com / anas123");
+        return;
+      }
+
+      setError(null);
+
+      // Save credentials if Remember me is checked
+      if (remember) {
+        localStorage.setItem(
+          "velocity_remember_me",
+          JSON.stringify({
+            email: cleanEmail,
+            password,
+            name: name.trim() || "Anas Qureshi",
+          })
+        );
+      } else {
+        localStorage.removeItem("velocity_remember_me");
+      }
+
       writeProfile({
-        name: name || "Traveler",
-        email: email || "you@velocity.app",
-        phone: phone || `${activeCountry.dial} `,
+        name: name.trim() || "Anas Qureshi",
+        email: cleanEmail,
+      });
+
+      toast.success("Welcome back, Anas!");
+      navigate({ to: "/home" });
+    } else {
+      // Account registration
+      if (!name.trim()) {
+        setError("Please enter your full name.");
+        return;
+      }
+      setError(null);
+      writeProfile({
+        name: name.trim(),
+        email: email.trim() || "anas@example.com",
+        phone: phone || `${activeCountry.dial} 300 1234567`,
         country,
         city: "",
       });
+      toast.success("Account created successfully!");
       navigate({ to: "/onboarding" });
-    } else {
-      // Persist the signed-in identity so the app shows the correct name.
-      writeProfile({
-        name: name.trim(),
-        ...(email ? { email } : {}),
-      });
-      navigate({ to: "/home" });
     }
   }
 
   return (
     <MobileFrame>
-      <div className="relative h-full w-full gradient-dawn overflow-y-auto no-scrollbar">
+      <div className="relative min-h-full w-full gradient-dawn flex flex-col">
         {/* decorative glow */}
         <div className="pointer-events-none absolute -top-24 -right-16 size-72 rounded-full bg-primary/40 blur-3xl" />
         <div className="pointer-events-none absolute bottom-40 -left-24 size-72 rounded-full bg-fuchsia-500/25 blur-3xl" />
 
-        {/* Compact brand row */}
-        <div className="relative flex items-center justify-between px-6 pt-6">
-          <button
-            onClick={() => window.history.back()}
-            aria-label="Back"
-            className="grid size-10 place-items-center rounded-2xl glass-panel active:scale-95 transition"
-          >
-            <ArrowLeft className="size-5" />
-          </button>
+        {/* Brand header — centered without top-left back button */}
+        <div className="relative flex items-center justify-center px-6 pt-3">
           <div className="inline-flex items-center gap-2 font-display font-black tracking-tight">
             <span className="grid size-8 place-items-center rounded-xl gradient-sunrise shadow-glow">
               <Bus className="size-4 text-primary-foreground" />
             </span>
-            <span className="bg-clip-text text-transparent gradient-sunrise text-lg">
+            <span className="bg-clip-text text-transparent gradient-sunrise text-xl font-bold">
               VELOCITY
             </span>
           </div>
-          <span className="w-10" />
         </div>
 
-        <div className="relative px-6 pt-4 pb-10">
+        <div className="relative px-6 pt-4 pb-12">
           <div className="animate-fade-up">
             <div className="inline-flex items-center gap-1.5 rounded-full glass-panel px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-primary">
               <Sparkles className="size-3" />
@@ -109,15 +155,21 @@ function SignIn() {
             </div>
             <h1 className="mt-3 font-display text-[40px] font-black leading-[1.05] tracking-tight">
               {mode === "signin" ? (
-                <>Hey,<br />
-                <span className="bg-clip-text text-transparent gradient-sunrise">
-                  welcome back
-                </span></>
+                <>
+                  Hey,
+                  <br />
+                  <span className="bg-clip-text text-transparent gradient-sunrise">
+                    welcome back
+                  </span>
+                </>
               ) : (
-                <>Let's get<br />
-                <span className="bg-clip-text text-transparent gradient-sunrise">
-                  you on board
-                </span></>
+                <>
+                  Let's get
+                  <br />
+                  <span className="bg-clip-text text-transparent gradient-sunrise">
+                    you on board
+                  </span>
+                </>
               )}
             </h1>
             <p className="mt-3 text-sm text-muted-foreground max-w-[36ch]">
@@ -137,7 +189,10 @@ function SignIn() {
             />
             <button
               type="button"
-              onClick={() => { setMode("signin"); setAgree(false); setError(null); }}
+              onClick={() => {
+                setMode("signin");
+                setError(null);
+              }}
               className={
                 "relative z-10 py-2.5 transition-colors " +
                 (mode === "signin" ? "text-primary-foreground" : "text-muted-foreground")
@@ -147,7 +202,10 @@ function SignIn() {
             </button>
             <button
               type="button"
-              onClick={() => { setMode("signup"); setAgree(false); setError(null); }}
+              onClick={() => {
+                setMode("signup");
+                setError(null);
+              }}
               className={
                 "relative z-10 py-2.5 transition-colors " +
                 (mode === "signup" ? "text-primary-foreground" : "text-muted-foreground")
@@ -235,7 +293,7 @@ function SignIn() {
                   icon={User}
                   label="Full name"
                   type="text"
-                  placeholder="Aarav Rana"
+                  placeholder="e.g. Anas Qureshi"
                   value={name}
                   onChange={setName}
                 />
@@ -255,7 +313,7 @@ function SignIn() {
                 icon={User}
                 label="Your name"
                 type="text"
-                placeholder="e.g. Anas"
+                placeholder="e.g. Anas Qureshi"
                 value={name}
                 onChange={setName}
               />
@@ -265,7 +323,7 @@ function SignIn() {
               icon={Mail}
               label="Email"
               type="email"
-              placeholder="you@velocity.app"
+              placeholder="anas@example.com"
               autoComplete="email"
               value={email}
               onChange={setEmail}
@@ -280,6 +338,8 @@ function SignIn() {
                 <input
                   type={showPwd ? "text" : "password"}
                   placeholder="••••••••"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
                   autoComplete={mode === "signin" ? "current-password" : "new-password"}
                   className="flex-1 bg-transparent text-sm outline-none placeholder:text-muted-foreground/60"
                 />
@@ -323,11 +383,14 @@ function SignIn() {
               </div>
             )}
 
-            {/* T&C checkbox — required in BOTH modes */}
+            {/* T&C checkbox */}
             <label className="mt-2 flex items-start gap-3 rounded-2xl glass-panel p-3 cursor-pointer">
               <button
                 type="button"
-                onClick={() => { setAgree((a) => !a); if (error) setError(null); }}
+                onClick={() => {
+                  setAgree((a) => !a);
+                  if (error) setError(null);
+                }}
                 aria-pressed={agree}
                 className={
                   "mt-0.5 grid size-5 shrink-0 place-items-center rounded-md border transition-all " +
@@ -369,7 +432,7 @@ function SignIn() {
             </button>
           </form>
 
-          {/* Socials — ONLY on sign in (removed on create account) */}
+          {/* Social login buttons with Sonner toast feedback */}
           {mode === "signin" && (
             <>
               <div className="my-6 flex items-center gap-3">
@@ -381,11 +444,19 @@ function SignIn() {
               </div>
 
               <div className="grid grid-cols-2 gap-3">
-                <button className="h-12 rounded-2xl glass-strong text-sm font-semibold active:scale-95 transition-transform">
-                   Apple
+                <button
+                  type="button"
+                  onClick={() => toast.info("Apple Sign In feature coming soon! ")}
+                  className="h-12 flex items-center justify-center gap-2 rounded-2xl glass-strong text-sm font-semibold active:scale-95 transition-transform"
+                >
+                  <span></span> Apple
                 </button>
-                <button className="h-12 rounded-2xl glass-strong text-sm font-semibold active:scale-95 transition-transform">
-                  G  Google
+                <button
+                  type="button"
+                  onClick={() => toast.info("Google Sign In feature coming soon! 🌐")}
+                  className="h-12 flex items-center justify-center gap-2 rounded-2xl glass-strong text-sm font-semibold active:scale-95 transition-transform"
+                >
+                  <span className="font-black text-primary">G</span> Google
                 </button>
               </div>
             </>
@@ -438,7 +509,7 @@ function ForgotModal({ onClose }: { onClose: () => void }) {
                 <Mail className="size-4 text-muted-foreground" />
                 <input
                   type="email"
-                  placeholder="you@velocity.app"
+                  placeholder="anas@example.com"
                   className="flex-1 bg-transparent text-sm outline-none"
                 />
               </div>
@@ -446,14 +517,17 @@ function ForgotModal({ onClose }: { onClose: () => void }) {
           </div>
 
           <button
-            onClick={onClose}
+            onClick={() => {
+              toast.success("Password reset link sent to your email!");
+              onClose();
+            }}
             className="btn-shimmer mt-5 flex h-12 w-full items-center justify-center gap-2 rounded-2xl gradient-sunrise font-bold text-primary-foreground shadow-glow active:scale-[0.98] transition-transform"
           >
             Send me the magic link
             <Sparkles className="size-4" />
           </button>
           <p className="mt-3 text-[10px] text-muted-foreground italic">
-            P.S. Try "password123" next time. Just kidding. Please don't.
+            P.S. Try "anas123" next time.
           </p>
         </div>
       </div>

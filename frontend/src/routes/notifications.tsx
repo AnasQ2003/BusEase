@@ -84,14 +84,14 @@ function Notifications() {
 
   return (
     <MobileFrame>
-      <div className="relative h-full w-full overflow-hidden bg-background">
+      <div className="relative min-h-full w-full bg-background flex flex-col">
         <div
           className="absolute inset-x-0 top-0 h-40 pointer-events-none"
           style={{ background: "radial-gradient(80% 60% at 50% 0%, rgba(255,120,50,0.28) 0%, transparent 70%)" }}
         />
         <TopBar showBack title="Notifications" subtitle={unread ? `${unread} unread` : "You're all caught up"} />
 
-        <div className="relative h-[calc(100%-64px-80px)] overflow-y-auto no-scrollbar px-5 pb-6 space-y-3 stagger">
+        <div className="relative flex-1 overflow-y-auto no-scrollbar px-5 pb-32 space-y-3 stagger">
           <div className="flex items-center justify-between px-1">
             <span className="text-[10px] uppercase tracking-widest text-muted-foreground">Recent</span>
             <button

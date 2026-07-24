@@ -52,7 +52,7 @@ function PersonalInfo() {
 
   return (
     <MobileFrame>
-      <div className="relative h-full w-full gradient-dawn overflow-hidden">
+      <div className="relative min-h-full w-full gradient-dawn flex flex-col">
         <div className="pointer-events-none absolute -top-24 -right-16 size-72 rounded-full bg-primary/30 blur-3xl" />
         <div className="pointer-events-none absolute bottom-24 -left-16 size-64 rounded-full bg-fuchsia-500/25 blur-3xl" />
 
@@ -68,15 +68,18 @@ function PersonalInfo() {
                 className="grid h-10 place-items-center gap-1.5 rounded-2xl gradient-primary text-primary-foreground px-3 shadow-glow active:scale-95 transition"
               >
                 <span className="inline-flex items-center gap-1.5 text-xs font-bold">
-                  <Pencil className="size-3.5" /> Edit
+                  <Pencil className="size-3.5" />
+                  Edit
                 </span>
               </button>
             ) : (
               <button
                 type="button"
-                onClick={() => { setProfile(readProfile()); setEditing(false); }}
+                onClick={() => {
+                  setProfile(readProfile());
+                  setEditing(false);
+                }}
                 className="grid size-10 place-items-center rounded-2xl glass-panel active:scale-95 transition"
-                aria-label="Cancel"
               >
                 <X className="size-4" />
               </button>
@@ -86,7 +89,7 @@ function PersonalInfo() {
 
         <form
           onSubmit={save}
-          className="relative h-[calc(100%-72px)] overflow-y-auto no-scrollbar px-5 pb-6 stagger"
+          className="relative flex-1 overflow-y-auto no-scrollbar px-5 pb-32 stagger"
         >
           {/* Avatar block */}
           <div className="flex flex-col items-center pt-2 pb-4">

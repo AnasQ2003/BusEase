@@ -54,7 +54,7 @@ function Tickets() {
 
   return (
     <MobileFrame>
-      <div className="relative h-full w-full overflow-hidden bg-background">
+      <div className="relative min-h-full w-full bg-background flex flex-col">
         <TopBar title="My Trips" onMenu={() => setDrawer(true)} />
 
         <div className="px-5 mb-3 flex gap-2">
@@ -74,7 +74,7 @@ function Tickets() {
           ))}
         </div>
 
-        <div className="h-[calc(100%-64px-80px-52px)] overflow-y-auto no-scrollbar px-5 pb-6 space-y-3 stagger">
+        <div className="flex-1 overflow-y-auto no-scrollbar px-5 pb-32 space-y-3 stagger">
           {visible.length === 0 && (
             <div className="mt-16 flex flex-col items-center text-center text-muted-foreground">
               <div className="grid size-16 place-items-center rounded-3xl glass-panel mb-3">

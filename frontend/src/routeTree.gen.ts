@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as HelpRouteImport } from './routes/help'
 import { Route as HomeRouteImport } from './routes/home'
 import { Route as LiveTrackRouteImport } from './routes/live-track'
 import { Route as NotificationsRouteImport } from './routes/notifications'
@@ -34,6 +35,11 @@ import { Route as WalletRouteImport } from './routes/wallet'
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HelpRoute = HelpRouteImport.update({
+  id: '/help',
+  path: '/help',
   getParentRoute: () => rootRouteImport,
 } as any)
 const HomeRoute = HomeRouteImport.update({
@@ -139,6 +145,7 @@ const WalletRoute = WalletRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/help': typeof HelpRoute
   '/home': typeof HomeRoute
   '/live-track': typeof LiveTrackRoute
   '/notifications': typeof NotificationsRoute
@@ -162,6 +169,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/help': typeof HelpRoute
   '/home': typeof HomeRoute
   '/live-track': typeof LiveTrackRoute
   '/notifications': typeof NotificationsRoute
@@ -186,6 +194,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/help': typeof HelpRoute
   '/home': typeof HomeRoute
   '/live-track': typeof LiveTrackRoute
   '/notifications': typeof NotificationsRoute
@@ -211,6 +220,7 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/help'
     | '/home'
     | '/live-track'
     | '/notifications'
@@ -234,6 +244,7 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/help'
     | '/home'
     | '/live-track'
     | '/notifications'
@@ -257,6 +268,7 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/help'
     | '/home'
     | '/live-track'
     | '/notifications'
@@ -281,6 +293,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  HelpRoute: typeof HelpRoute
   HomeRoute: typeof HomeRoute
   LiveTrackRoute: typeof LiveTrackRoute
   NotificationsRoute: typeof NotificationsRoute
@@ -310,6 +323,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/help': {
+      id: '/help'
+      path: '/help'
+      fullPath: '/help'
+      preLoaderRoute: typeof HelpRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/home': {
@@ -457,6 +477,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  HelpRoute: HelpRoute,
   HomeRoute: HomeRoute,
   LiveTrackRoute: LiveTrackRoute,
   NotificationsRoute: NotificationsRoute,

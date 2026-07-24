@@ -30,14 +30,14 @@ function WalletPage() {
 
   return (
     <MobileFrame>
-      <div className="relative h-full w-full overflow-hidden bg-background">
+      <div className="relative min-h-full w-full bg-background flex flex-col">
         <div
           className="pointer-events-none absolute inset-x-0 top-0 h-72"
           style={{ background: "radial-gradient(80% 60% at 50% 0%, rgba(255,120,50,0.35) 0%, transparent 70%)" }}
         />
         <TopBar showBack title="Wallet & Offers" />
 
-        <div className="relative h-[calc(100%-64px-80px)] overflow-y-auto no-scrollbar px-5 pb-6">
+        <div className="relative flex-1 overflow-y-auto no-scrollbar px-5 pb-32">
           {/* Balance card */}
           <div className="relative overflow-hidden rounded-3xl p-5 gradient-sunrise text-primary-foreground shadow-glow animate-fade-up">
             <div className="absolute -top-14 -right-14 size-44 rounded-full bg-white/20 blur-2xl" />

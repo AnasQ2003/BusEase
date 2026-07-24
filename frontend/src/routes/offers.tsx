@@ -22,10 +22,10 @@ function Offers() {
   const [drawer, setDrawer] = useState(false);
   return (
     <MobileFrame>
-      <div className="relative h-full w-full overflow-hidden bg-background">
+      <div className="relative min-h-full w-full bg-background flex flex-col">
         <TopBar title="Offers" onMenu={() => setDrawer(true)} />
 
-        <div className="h-[calc(100%-64px-80px)] overflow-y-auto no-scrollbar px-5 pb-6">
+        <div className="flex-1 overflow-y-auto no-scrollbar px-5 pb-32">
           {/* Hero coupon */}
           <div className="perspective-1000 relative rounded-3xl overflow-hidden p-5 gradient-primary text-primary-foreground shadow-glow animate-fade-up">
             <div className="absolute -top-8 -right-8 size-40 rounded-full bg-foreground/20 blur-2xl" />

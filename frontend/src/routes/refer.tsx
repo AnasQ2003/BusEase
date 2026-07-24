@@ -39,10 +39,10 @@ function ReferPage() {
 
   return (
     <MobileFrame>
-      <div className="relative h-full w-full overflow-hidden bg-background">
+      <div className="relative min-h-full w-full bg-background flex flex-col">
         <TopBar showBack title="Refer & Earn" />
 
-        <div className="relative h-[calc(100%-64px-80px)] overflow-y-auto no-scrollbar px-5 pb-6">
+        <div className="relative flex-1 overflow-y-auto no-scrollbar px-5 pb-32">
           {/* Hero */}
           <div className="relative overflow-hidden rounded-3xl gradient-primary text-primary-foreground p-6 shadow-glow animate-fade-up">
             <div className="absolute -top-12 -right-10 size-40 rounded-full bg-white/25 blur-2xl" />

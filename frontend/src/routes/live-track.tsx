@@ -34,10 +34,10 @@ function LiveTrack() {
 
   return (
     <MobileFrame>
-      <div className="relative h-full w-full overflow-hidden bg-background">
+      <div className="relative min-h-full w-full bg-background flex flex-col">
         <TopBar showBack title="Live tracking" subtitle="Karachi → Lahore · VH-55440" />
 
-        <div className="relative h-[calc(100%-64px-80px)] overflow-y-auto no-scrollbar px-5 pb-6">
+        <div className="relative flex-1 overflow-y-auto no-scrollbar px-5 pb-32">
           {/* Map illustration */}
           <div className="relative h-56 overflow-hidden rounded-3xl border border-foreground/10 shadow-elevated animate-fade-up">
             <div

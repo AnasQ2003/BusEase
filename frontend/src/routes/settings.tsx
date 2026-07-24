@@ -104,10 +104,10 @@ function Settings() {
 
   return (
     <MobileFrame>
-      <div className="relative h-full w-full overflow-hidden bg-background">
+      <div className="relative min-h-full w-full bg-background flex flex-col">
         <TopBar showBack title="Settings" />
 
-        <div className="h-[calc(100%-64px-80px)] overflow-y-auto no-scrollbar px-5 pb-6 space-y-5 stagger">
+        <div className="flex-1 overflow-y-auto no-scrollbar px-5 pb-32 space-y-5 stagger">
           <section>
             <div className="mb-2 ml-1 text-[10px] uppercase tracking-widest text-muted-foreground">
               Preferences

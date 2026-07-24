@@ -28,9 +28,9 @@ const primary = [
 
 const secondary = [
   { to: "/settings", label: "Settings", icon: Settings },
-  { to: "/settings", label: "Notifications", icon: Bell },
+  { to: "/notifications", label: "Notifications", icon: Bell },
   { to: "/settings", label: "Appearance", icon: Moon },
-  { to: "/settings", label: "Help Center", icon: HelpCircle },
+  { to: "/help", label: "Help Center", icon: HelpCircle },
   { to: "/terms", label: "Terms of Service", icon: FileText },
   { to: "/privacy", label: "Privacy Policy", icon: Shield },
   { to: "/offers", label: "Rate Velocity", icon: Star },

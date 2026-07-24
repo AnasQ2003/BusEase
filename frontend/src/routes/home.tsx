@@ -22,11 +22,11 @@ export const Route = createFileRoute("/home")({
 });
 
 const quick = [
-  { icon: Zap, label: "Live Track" },
-  { icon: Tag, label: "Offers" },
-  { icon: Bus, label: "Sleepers" },
-  { icon: Calendar, label: "Schedule" },
-];
+  { icon: Zap, label: "Live Track", to: "/live-track" },
+  { icon: Tag, label: "Offers", to: "/offers" },
+  { icon: Bus, label: "Sleepers", to: "/search" },
+  { icon: Calendar, label: "Schedule", to: "/search" },
+] as const;
 
 
 function Home() {
@@ -40,7 +40,7 @@ function Home() {
 
   return (
     <MobileFrame>
-      <div className="relative h-full w-full overflow-hidden bg-background">
+      <div className="relative min-h-full w-full bg-background flex flex-col">
         {/* Ambient gradient */}
         <div
           className="pointer-events-none absolute inset-x-0 top-0 h-96"
@@ -52,7 +52,7 @@ function Home() {
 
         <TopBar onMenu={() => setDrawer(true)} />
 
-        <div className="relative h-[calc(100%-64px-80px)] overflow-y-auto no-scrollbar px-5 pb-6">
+        <div className="relative flex-1 overflow-y-auto no-scrollbar px-5 pb-32 space-y-6">
           {/* Greeting */}
           <div className="animate-fade-up flex items-end justify-between">
             <div>
@@ -165,16 +165,17 @@ function Home() {
 
           {/* Quick actions */}
           <div className="mt-6 grid grid-cols-4 gap-3 stagger">
-            {quick.map(({ icon: Icon, label }) => (
-              <button
+            {quick.map(({ icon: Icon, label, to }) => (
+              <Link
                 key={label}
+                to={to}
                 className="flex flex-col items-center gap-2 rounded-2xl glass-panel p-3 active:scale-95 transition-transform"
               >
                 <span className="grid size-10 place-items-center rounded-xl bg-primary/15">
                   <Icon className="size-5 text-primary" />
                 </span>
                 <span className="text-[10px] font-semibold">{label}</span>
-              </button>
+              </Link>
             ))}
           </div>
 
