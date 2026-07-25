@@ -10,7 +10,7 @@
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.0+-38BDF8.svg)](https://tailwindcss.com/)
 [![TanStack Router](https://img.shields.io/badge/TanStack_Router-v1-FF4154.svg)](https://tanstack.com/router)
 
-**BusEase** is a state-of-the-art interstate bus ticket booking web application designed with a realistic iPhone 15 Pro hardware preview frame, real-time seat selection, live bus tracking, multi-country localization, and complete user profile persistence.
+**BusEase** is a state-of-the-art interstate bus ticket booking application designed with a realistic iPhone 15 Pro hardware preview frame, real-time seat selection, live bus tracking, multi-country localization, and complete user profile persistence.
 
 </div>
 
@@ -25,7 +25,7 @@
 - **In-App Toast Container**: All popup notifications render directly inside the mobile phone screen.
 
 ### 🔐 2. Authentication & User Persistence
-- **Single User Credentials**: Pre-configured registered account: `anas@example.com` / `anas123`.
+- **Single User Credentials**: Pre-configured registered account.
 - **Remember Me Functionality**: Persists credentials in `localStorage` (`velocity_remember_me`) with automatic form pre-filling on mount.
 - **Social Login Placeholders**: Interactive Apple and Google login options with instant in-app toast feedback (`"Feature coming soon!"`).
 
@@ -85,7 +85,7 @@ cd ../frontend
 npm run dev
 ```
 
-Open `http://localhost:5173` in your browser to view the application inside the realistic iPhone preview frame.
+Open in your browser to view the application inside the realistic iPhone preview frame.
 
 ---
 
@@ -135,7 +135,7 @@ BusEase/
 
 ## 📸 Application Screenshots Gallery (53 Screenshots)
 
-All 53 application screenshots captured during development are archived in the [`/screenshot`](./screenshot) directory and displayed below:
+All application screenshots captured during development are archived in the [`/screenshot`](./screenshot) directory and displayed below:
 
 <table align="center">
   <tr>
