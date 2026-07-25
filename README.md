@@ -2,6 +2,8 @@
 
 # 🚌 BusEase (Velocity) — Premium Bus Ticket Booking Platform
 
+🎬 **Watch the Demo Video — Chat Application:** *(https://youtu.be/S_MUMI5wSzY)*
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0+-blue.svg)](https://www.typescriptlang.org/)
 [![React](https://img.shields.io/badge/React-18.0+-61DAFB.svg)](https://react.dev/)
@@ -11,14 +13,6 @@
 **BusEase (Velocity)** is a state-of-the-art interstate bus ticket booking web application designed with a realistic iPhone 15 Pro hardware preview frame, real-time seat selection, live bus tracking, multi-country localization, and complete user profile persistence.
 
 </div>
-
----
-
-## 📽️ Project Demo Video
-
-[![Watch Project Demo Video](https://youtu.be/S_MUMI5wSzY)
-
-> 💡 *Click the thumbnail above to watch the full walkthrough video on YouTube. (Replace `PLACEHOLDER_VIDEO_ID` with your actual YouTube video link).*
 
 ---
 
