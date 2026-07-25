@@ -137,61 +137,116 @@ BusEase/
 
 All 53 application screenshots captured during development are archived in the [`/screenshot`](./screenshot) directory and displayed below:
 
-| # | Screenshot Preview | Filename |
-|---|-------------------|----------|
-| 1 | ![Screenshot 1](./screenshot/Screenshot%202026-07-24%20202021.png) | `Screenshot 2026-07-24 202021.png` |
-| 2 | ![Screenshot 2](./screenshot/Screenshot%202026-07-24%20202027.png) | `Screenshot 2026-07-24 202027.png` |
-| 3 | ![Screenshot 3](./screenshot/Screenshot%202026-07-24%20202033.png) | `Screenshot 2026-07-24 202033.png` |
-| 4 | ![Screenshot 4](./screenshot/Screenshot%202026-07-24%20202041.png) | `Screenshot 2026-07-24 202041.png` |
-| 5 | ![Screenshot 5](./screenshot/Screenshot%202026-07-24%20202047.png) | `Screenshot 2026-07-24 202047.png` |
-| 6 | ![Screenshot 6](./screenshot/Screenshot%202026-07-24%20202055.png) | `Screenshot 2026-07-24 202055.png` |
-| 7 | ![Screenshot 7](./screenshot/Screenshot%202026-07-24%20202101.png) | `Screenshot 2026-07-24 202101.png` |
-| 8 | ![Screenshot 8](./screenshot/Screenshot%202026-07-24%20202108.png) | `Screenshot 2026-07-24 202108.png` |
-| 9 | ![Screenshot 9](./screenshot/Screenshot%202026-07-24%20202117.png) | `Screenshot 2026-07-24 202117.png` |
-| 10 | ![Screenshot 10](./screenshot/Screenshot%202026-07-24%20202129.png) | `Screenshot 2026-07-24 202129.png` |
-| 11 | ![Screenshot 11](./screenshot/Screenshot%202026-07-24%20202147.png) | `Screenshot 2026-07-24 202147.png` |
-| 12 | ![Screenshot 12](./screenshot/Screenshot%202026-07-24%20202239.png) | `Screenshot 2026-07-24 202239.png` |
-| 13 | ![Screenshot 13](./screenshot/Screenshot%202026-07-24%20202244.png) | `Screenshot 2026-07-24 202244.png` |
-| 14 | ![Screenshot 14](./screenshot/Screenshot%202026-07-24%20202407.png) | `Screenshot 2026-07-24 202407.png` |
-| 15 | ![Screenshot 15](./screenshot/Screenshot%202026-07-24%20202413.png) | `Screenshot 2026-07-24 202413.png` |
-| 16 | ![Screenshot 16](./screenshot/Screenshot%202026-07-24%20202418.png) | `Screenshot 2026-07-24 202418.png` |
-| 17 | ![Screenshot 17](./screenshot/Screenshot%202026-07-24%20202423.png) | `Screenshot 2026-07-24 202423.png` |
-| 18 | ![Screenshot 18](./screenshot/Screenshot%202026-07-24%20202428.png) | `Screenshot 2026-07-24 202428.png` |
-| 19 | ![Screenshot 19](./screenshot/Screenshot%202026-07-24%20202434.png) | `Screenshot 2026-07-24 202434.png` |
-| 20 | ![Screenshot 20](./screenshot/Screenshot%202026-07-24%20202448.png) | `Screenshot 2026-07-24 202448.png` |
-| 21 | ![Screenshot 21](./screenshot/Screenshot%202026-07-24%20202453.png) | `Screenshot 2026-07-24 202453.png` |
-| 22 | ![Screenshot 22](./screenshot/Screenshot%202026-07-24%20202457.png) | `Screenshot 2026-07-24 202457.png` |
-| 23 | ![Screenshot 23](./screenshot/Screenshot%202026-07-24%20202504.png) | `Screenshot 2026-07-24 202504.png` |
-| 24 | ![Screenshot 24](./screenshot/Screenshot%202026-07-24%20202517.png) | `Screenshot 2026-07-24 202517.png` |
-| 25 | ![Screenshot 25](./screenshot/Screenshot%202026-07-24%20202521.png) | `Screenshot 2026-07-24 202521.png` |
-| 26 | ![Screenshot 26](./screenshot/Screenshot%202026-07-24%20202538.png) | `Screenshot 2026-07-24 202538.png` |
-| 27 | ![Screenshot 27](./screenshot/Screenshot%202026-07-24%20202545.png) | `Screenshot 2026-07-24 202545.png` |
-| 28 | ![Screenshot 28](./screenshot/Screenshot%202026-07-24%20202551.png) | `Screenshot 2026-07-24 202551.png` |
-| 29 | ![Screenshot 29](./screenshot/Screenshot%202026-07-24%20202555.png) | `Screenshot 2026-07-24 202555.png` |
-| 30 | ![Screenshot 30](./screenshot/Screenshot%202026-07-24%20202600.png) | `Screenshot 2026-07-24 202600.png` |
-| 31 | ![Screenshot 31](./screenshot/Screenshot%202026-07-24%20202605.png) | `Screenshot 2026-07-24 202605.png` |
-| 32 | ![Screenshot 32](./screenshot/Screenshot%202026-07-24%20202610.png) | `Screenshot 2026-07-24 202610.png` |
-| 33 | ![Screenshot 33](./screenshot/Screenshot%202026-07-24%20202617.png) | `Screenshot 2026-07-24 202617.png` |
-| 34 | ![Screenshot 34](./screenshot/Screenshot%202026-07-24%20202625.png) | `Screenshot 2026-07-24 202625.png` |
-| 35 | ![Screenshot 35](./screenshot/Screenshot%202026-07-24%20202636.png) | `Screenshot 2026-07-24 202636.png` |
-| 36 | ![Screenshot 36](./screenshot/Screenshot%202026-07-24%20202641.png) | `Screenshot 2026-07-24 202641.png` |
-| 37 | ![Screenshot 37](./screenshot/Screenshot%202026-07-24%20202644.png) | `Screenshot 2026-07-24 202644.png` |
-| 38 | ![Screenshot 38](./screenshot/Screenshot%202026-07-24%20202654.png) | `Screenshot 2026-07-24 202654.png` |
-| 39 | ![Screenshot 39](./screenshot/Screenshot%202026-07-24%20202703.png) | `Screenshot 2026-07-24 202703.png` |
-| 40 | ![Screenshot 40](./screenshot/Screenshot%202026-07-24%20202708.png) | `Screenshot 2026-07-24 202708.png` |
-| 41 | ![Screenshot 41](./screenshot/Screenshot%202026-07-24%20202714.png) | `Screenshot 2026-07-24 202714.png` |
-| 42 | ![Screenshot 42](./screenshot/Screenshot%202026-07-24%20202721.png) | `Screenshot 2026-07-24 202721.png` |
-| 43 | ![Screenshot 43](./screenshot/Screenshot%202026-07-24%20202728.png) | `Screenshot 2026-07-24 202728.png` |
-| 44 | ![Screenshot 44](./screenshot/Screenshot%202026-07-24%20202733.png) | `Screenshot 2026-07-24 202733.png` |
-| 45 | ![Screenshot 45](./screenshot/Screenshot%202026-07-24%20202736.png) | `Screenshot 2026-07-24 202736.png` |
-| 46 | ![Screenshot 46](./screenshot/Screenshot%202026-07-24%20202741.png) | `Screenshot 2026-07-24 202741.png` |
-| 47 | ![Screenshot 47](./screenshot/Screenshot%202026-07-24%20202748.png) | `Screenshot 2026-07-24 202748.png` |
-| 48 | ![Screenshot 48](./screenshot/Screenshot%202026-07-24%20202752.png) | `Screenshot 2026-07-24 202752.png` |
-| 49 | ![Screenshot 49](./screenshot/Screenshot%202026-07-24%20202755.png) | `Screenshot 2026-07-24 202755.png` |
-| 50 | ![Screenshot 50](./screenshot/Screenshot%202026-07-24%20202758.png) | `Screenshot 2026-07-24 202758.png` |
-| 51 | ![Screenshot 51](./screenshot/Screenshot%202026-07-24%20202857.png) | `Screenshot 2026-07-24 202857.png` |
-| 52 | ![Screenshot 52](./screenshot/Screenshot%202026-07-24%20202859.png) | `Screenshot 2026-07-24 202859.png` |
-| 53 | ![Screenshot 53](./screenshot/Screenshot%202026-07-24%20202910.png) | `Screenshot 2026-07-24 202910.png` |
+<table align="center">
+  <tr>
+    <td align="center" width="50%"><img src="./screenshot/Screenshot%202026-07-24%20202021.png" width="100%"/><br/><b>1. Screenshot</b></td>
+    <td align="center" width="50%"><img src="./screenshot/Screenshot%202026-07-24%20202027.png" width="100%"/><br/><b>2. Screenshot</b></td>
+  </tr>
+  <tr>
+    <td align="center" width="50%"><img src="./screenshot/Screenshot%202026-07-24%20202033.png" width="100%"/><br/><b>3. Screenshot</b></td>
+    <td align="center" width="50%"><img src="./screenshot/Screenshot%202026-07-24%20202041.png" width="100%"/><br/><b>4. Screenshot</b></td>
+  </tr>
+  <tr>
+    <td align="center" width="50%"><img src="./screenshot/Screenshot%202026-07-24%20202047.png" width="100%"/><br/><b>5. Screenshot</b></td>
+    <td align="center" width="50%"><img src="./screenshot/Screenshot%202026-07-24%20202055.png" width="100%"/><br/><b>6. Screenshot</b></td>
+  </tr>
+  <tr>
+    <td align="center" width="50%"><img src="./screenshot/Screenshot%202026-07-24%20202101.png" width="100%"/><br/><b>7. Screenshot</b></td>
+    <td align="center" width="50%"><img src="./screenshot/Screenshot%202026-07-24%20202108.png" width="100%"/><br/><b>8. Screenshot</b></td>
+  </tr>
+  <tr>
+    <td align="center" width="50%"><img src="./screenshot/Screenshot%202026-07-24%20202117.png" width="100%"/><br/><b>9. Screenshot</b></td>
+    <td align="center" width="50%"><img src="./screenshot/Screenshot%202026-07-24%20202129.png" width="100%"/><br/><b>10. Screenshot</b></td>
+  </tr>
+  <tr>
+    <td align="center" width="50%"><img src="./screenshot/Screenshot%202026-07-24%20202147.png" width="100%"/><br/><b>11. Screenshot</b></td>
+    <td align="center" width="50%"><img src="./screenshot/Screenshot%202026-07-24%20202239.png" width="100%"/><br/><b>12. Screenshot</b></td>
+  </tr>
+  <tr>
+    <td align="center" width="50%"><img src="./screenshot/Screenshot%202026-07-24%20202244.png" width="100%"/><br/><b>13. Screenshot</b></td>
+    <td align="center" width="50%"><img src="./screenshot/Screenshot%202026-07-24%20202407.png" width="100%"/><br/><b>14. Screenshot</b></td>
+  </tr>
+  <tr>
+    <td align="center" width="50%"><img src="./screenshot/Screenshot%202026-07-24%20202413.png" width="100%"/><br/><b>15. Screenshot</b></td>
+    <td align="center" width="50%"><img src="./screenshot/Screenshot%202026-07-24%20202418.png" width="100%"/><br/><b>16. Screenshot</b></td>
+  </tr>
+  <tr>
+    <td align="center" width="50%"><img src="./screenshot/Screenshot%202026-07-24%20202423.png" width="100%"/><br/><b>17. Screenshot</b></td>
+    <td align="center" width="50%"><img src="./screenshot/Screenshot%202026-07-24%20202428.png" width="100%"/><br/><b>18. Screenshot</b></td>
+  </tr>
+  <tr>
+    <td align="center" width="50%"><img src="./screenshot/Screenshot%202026-07-24%20202434.png" width="100%"/><br/><b>19. Screenshot</b></td>
+    <td align="center" width="50%"><img src="./screenshot/Screenshot%202026-07-24%20202448.png" width="100%"/><br/><b>20. Screenshot</b></td>
+  </tr>
+  <tr>
+    <td align="center" width="50%"><img src="./screenshot/Screenshot%202026-07-24%20202453.png" width="100%"/><br/><b>21. Screenshot</b></td>
+    <td align="center" width="50%"><img src="./screenshot/Screenshot%202026-07-24%20202457.png" width="100%"/><br/><b>22. Screenshot</b></td>
+  </tr>
+  <tr>
+    <td align="center" width="50%"><img src="./screenshot/Screenshot%202026-07-24%20202504.png" width="100%"/><br/><b>23. Screenshot</b></td>
+    <td align="center" width="50%"><img src="./screenshot/Screenshot%202026-07-24%20202517.png" width="100%"/><br/><b>24. Screenshot</b></td>
+  </tr>
+  <tr>
+    <td align="center" width="50%"><img src="./screenshot/Screenshot%202026-07-24%20202521.png" width="100%"/><br/><b>25. Screenshot</b></td>
+    <td align="center" width="50%"><img src="./screenshot/Screenshot%202026-07-24%20202538.png" width="100%"/><br/><b>26. Screenshot</b></td>
+  </tr>
+  <tr>
+    <td align="center" width="50%"><img src="./screenshot/Screenshot%202026-07-24%20202545.png" width="100%"/><br/><b>27. Screenshot</b></td>
+    <td align="center" width="50%"><img src="./screenshot/Screenshot%202026-07-24%20202551.png" width="100%"/><br/><b>28. Screenshot</b></td>
+  </tr>
+  <tr>
+    <td align="center" width="50%"><img src="./screenshot/Screenshot%202026-07-24%20202555.png" width="100%"/><br/><b>29. Screenshot</b></td>
+    <td align="center" width="50%"><img src="./screenshot/Screenshot%202026-07-24%20202600.png" width="100%"/><br/><b>30. Screenshot</b></td>
+  </tr>
+  <tr>
+    <td align="center" width="50%"><img src="./screenshot/Screenshot%202026-07-24%20202605.png" width="100%"/><br/><b>31. Screenshot</b></td>
+    <td align="center" width="50%"><img src="./screenshot/Screenshot%202026-07-24%20202610.png" width="100%"/><br/><b>32. Screenshot</b></td>
+  </tr>
+  <tr>
+    <td align="center" width="50%"><img src="./screenshot/Screenshot%202026-07-24%20202617.png" width="100%"/><br/><b>33. Screenshot</b></td>
+    <td align="center" width="50%"><img src="./screenshot/Screenshot%202026-07-24%20202625.png" width="100%"/><br/><b>34. Screenshot</b></td>
+  </tr>
+  <tr>
+    <td align="center" width="50%"><img src="./screenshot/Screenshot%202026-07-24%20202636.png" width="100%"/><br/><b>35. Screenshot</b></td>
+    <td align="center" width="50%"><img src="./screenshot/Screenshot%202026-07-24%20202641.png" width="100%"/><br/><b>36. Screenshot</b></td>
+  </tr>
+  <tr>
+    <td align="center" width="50%"><img src="./screenshot/Screenshot%202026-07-24%20202644.png" width="100%"/><br/><b>37. Screenshot</b></td>
+    <td align="center" width="50%"><img src="./screenshot/Screenshot%202026-07-24%20202654.png" width="100%"/><br/><b>38. Screenshot</b></td>
+  </tr>
+  <tr>
+    <td align="center" width="50%"><img src="./screenshot/Screenshot%202026-07-24%20202703.png" width="100%"/><br/><b>39. Screenshot</b></td>
+    <td align="center" width="50%"><img src="./screenshot/Screenshot%202026-07-24%20202708.png" width="100%"/><br/><b>40. Screenshot</b></td>
+  </tr>
+  <tr>
+    <td align="center" width="50%"><img src="./screenshot/Screenshot%202026-07-24%20202714.png" width="100%"/><br/><b>41. Screenshot</b></td>
+    <td align="center" width="50%"><img src="./screenshot/Screenshot%202026-07-24%20202721.png" width="100%"/><br/><b>42. Screenshot</b></td>
+  </tr>
+  <tr>
+    <td align="center" width="50%"><img src="./screenshot/Screenshot%202026-07-24%20202728.png" width="100%"/><br/><b>43. Screenshot</b></td>
+    <td align="center" width="50%"><img src="./screenshot/Screenshot%202026-07-24%20202733.png" width="100%"/><br/><b>44. Screenshot</b></td>
+  </tr>
+  <tr>
+    <td align="center" width="50%"><img src="./screenshot/Screenshot%202026-07-24%20202736.png" width="100%"/><br/><b>45. Screenshot</b></td>
+    <td align="center" width="50%"><img src="./screenshot/Screenshot%202026-07-24%20202741.png" width="100%"/><br/><b>46. Screenshot</b></td>
+  </tr>
+  <tr>
+    <td align="center" width="50%"><img src="./screenshot/Screenshot%202026-07-24%20202748.png" width="100%"/><br/><b>47. Screenshot</b></td>
+    <td align="center" width="50%"><img src="./screenshot/Screenshot%202026-07-24%20202752.png" width="100%"/><br/><b>48. Screenshot</b></td>
+  </tr>
+  <tr>
+    <td align="center" width="50%"><img src="./screenshot/Screenshot%202026-07-24%20202755.png" width="100%"/><br/><b>49. Screenshot</b></td>
+    <td align="center" width="50%"><img src="./screenshot/Screenshot%202026-07-24%20202758.png" width="100%"/><br/><b>50. Screenshot</b></td>
+  </tr>
+  <tr>
+    <td align="center" width="50%"><img src="./screenshot/Screenshot%202026-07-24%20202857.png" width="100%"/><br/><b>51. Screenshot</b></td>
+    <td align="center" width="50%"><img src="./screenshot/Screenshot%202026-07-24%20202859.png" width="100%"/><br/><b>52. Screenshot</b></td>
+  </tr>
+  <tr>
+    <td align="center" width="50%"><img src="./screenshot/Screenshot%202026-07-24%20202910.png" width="100%"/><br/><b>53. Screenshot</b></td>
+    <td align="center" width="50%"></td>
+  </tr>
+</table>
 
 ---
 
