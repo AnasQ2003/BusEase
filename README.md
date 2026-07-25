@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🚌 BusEase (Velocity) — Premium Bus Ticket Booking Platform
+# 🚌 BusEase — Premium Bus Ticket Booking Platform
 
 🎬 **Watch the Demo Video — Chat Application:** *(https://youtu.be/S_MUMI5wSzY)*
 
