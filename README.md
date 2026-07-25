@@ -159,7 +159,7 @@ All 53 application screenshots captured during development are archived in the [
     <td align="center" width="50%"><img src="./screenshot/Screenshot%202026-07-24%20202129.png" width="100%"/><br/><b>10. Screenshot</b></td>
   </tr>
   <tr>
-    <td align="center" width="50%"><img src="./screenshot/Screenshot%202026-07-24%20202147.png" width="100%"/><br/><b>11. Screenshot</b></td>
+    <td align="center" width="50%"><img src="./screenshot/Screenshot%202026-07-24%20202910.png" width="100%"/><br/><b>11. Screenshot</b></td>
     <td align="center" width="50%"><img src="./screenshot/Screenshot%202026-07-24%20202239.png" width="100%"/><br/><b>12. Screenshot</b></td>
   </tr>
   <tr>
@@ -241,10 +241,6 @@ All 53 application screenshots captured during development are archived in the [
   <tr>
     <td align="center" width="50%"><img src="./screenshot/Screenshot%202026-07-24%20202857.png" width="100%"/><br/><b>51. Screenshot</b></td>
     <td align="center" width="50%"><img src="./screenshot/Screenshot%202026-07-24%20202859.png" width="100%"/><br/><b>52. Screenshot</b></td>
-  </tr>
-  <tr>
-    <td align="center" width="50%"><img src="./screenshot/Screenshot%202026-07-24%20202910.png" width="100%"/><br/><b>53. Screenshot</b></td>
-    <td align="center" width="50%"></td>
   </tr>
 </table>
 
