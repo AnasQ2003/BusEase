@@ -10,7 +10,7 @@
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.0+-38BDF8.svg)](https://tailwindcss.com/)
 [![TanStack Router](https://img.shields.io/badge/TanStack_Router-v1-FF4154.svg)](https://tanstack.com/router)
 
-**BusEase (Velocity)** is a state-of-the-art interstate bus ticket booking web application designed with a realistic iPhone 15 Pro hardware preview frame, real-time seat selection, live bus tracking, multi-country localization, and complete user profile persistence.
+**BusEase** is a state-of-the-art interstate bus ticket booking web application designed with a realistic iPhone 15 Pro hardware preview frame, real-time seat selection, live bus tracking, multi-country localization, and complete user profile persistence.
 
 </div>
 
