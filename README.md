@@ -1,3 +1,5 @@
+<div align="center">
+
 # 🚌 BusEase (Velocity) — Premium Bus Ticket Booking Platform
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -7,6 +9,8 @@
 [![TanStack Router](https://img.shields.io/badge/TanStack_Router-v1-FF4154.svg)](https://tanstack.com/router)
 
 **BusEase (Velocity)** is a state-of-the-art interstate bus ticket booking web application designed with a realistic iPhone 15 Pro hardware preview frame, real-time seat selection, live bus tracking, multi-country localization, and complete user profile persistence.
+
+</div>
 
 ---
 
@@ -197,6 +201,42 @@ All 53 application screenshots captured during development are archived in the [
 
 ---
 
-## 📜 License
+## 📄 License
 
-This project is licensed under the [MIT License](LICENSE).
+```
+MIT License
+
+Copyright (c) BusEase --- 2026 AnasQ2003🚌 
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+```
+
+---
+
+## 👨‍💻 Author
+
+**Anas Ahmed Qureshi** — [@AnasQ2003](https://github.com/AnasQ2003)
+
+---
+
+<div align="center">
+
+Built with ❤️ by **Anas**
+
+Made with 🔥 and a lot of ☕
+
+**⭐ If you found this useful, please star the repository!**
+
+</div>
